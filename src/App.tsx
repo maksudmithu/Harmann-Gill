@@ -56,6 +56,95 @@ function FAQItem({ question, answer, index }: any) {
   );
 }
 
+function ContactForm() {
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('submitting');
+    
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/aronnomithu@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            ...data,
+            _captcha: "false",
+            _subject: "New Consultation Request from Harmann Gill Website"
+        })
+      });
+
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return (
+      <div className="bg-forest border border-gold/20 p-8 rounded-sm text-center h-full flex flex-col items-center justify-center min-h-[400px]">
+        <div className="w-16 h-16 bg-forest-dark border border-gold/30 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <CheckCircle2 className="text-gold" size={32} />
+        </div>
+        <h4 className="text-2xl font-serif text-offwhite mb-4">Message Sent</h4>
+        <p className="text-slate-light leading-relaxed mb-8">
+          Thank you for reaching out. We have received your message and will get back to you shortly to schedule your consultation.
+        </p>
+        <button 
+          onClick={() => setStatus('idle')}
+          className="border border-gold text-gold px-8 py-3 rounded-sm font-bold tracking-wide hover:bg-gold hover:text-forest transition-colors"
+        >
+          Send Another Message
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-5">
+      {status === 'error' && (
+        <div className="bg-red-900/20 border border-red-500/50 text-red-200 p-4 rounded-sm text-sm">
+          Something went wrong. Please try again later.
+        </div>
+      )}
+      <div>
+        <input type="text" name="name" required placeholder="Full Name" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+      </div>
+      <div>
+        <input type="email" name="email" required placeholder="Email Address" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+      </div>
+      <div>
+        <input type="tel" name="phone" required placeholder="Phone Number" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+      </div>
+      <div>
+        <textarea name="message" required placeholder="How can we help you?" rows={4} className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm resize-none disabled:opacity-50" disabled={status === 'submitting'}></textarea>
+      </div>
+      {/* Honeypot field for FormSubmit */}
+      <input type="text" name="_honey" style={{ display: 'none' }} />
+      <button type="submit" disabled={status === 'submitting'} className="w-full bg-gold text-forest py-4 font-bold hover:bg-gold-hover transition-colors rounded-sm tracking-wide mt-2 disabled:bg-gold/70 flex justify-center items-center gap-2">
+        {status === 'submitting' ? (
+          <>
+            <div className="w-5 h-5 border-2 border-forest/30 border-t-forest rounded-full animate-spin"></div>
+            Sending...
+          </>
+        ) : (
+          'Send Secure Message'
+        )}
+      </button>
+    </form>
+  );
+}
+
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -564,28 +653,7 @@ export default function App() {
           
           <FadeIn delay={0.2} className="bg-forest-dark p-10 md:p-12 rounded-sm border border-gold/10 shadow-xl">
              <h3 className="text-2xl font-serif text-offwhite mb-8">Send a Message</h3>
-             <form action="https://formsubmit.co/aronnomithu@gmail.com" method="POST" className="space-y-5">
-               {/* FormSubmit.co settings */}
-               <input type="hidden" name="_captcha" value="false" />
-               <input type="hidden" name="_subject" value="New Consultation Request from Harmann Gill Website" />
-               <input type="hidden" name="_template" value="table" />
-               
-               <div>
-                 <input type="text" name="name" required placeholder="Full Name" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm" />
-               </div>
-               <div>
-                 <input type="email" name="email" required placeholder="Email Address" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm" />
-               </div>
-               <div>
-                 <input type="tel" name="phone" required placeholder="Phone Number" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm" />
-               </div>
-               <div>
-                 <textarea name="message" required placeholder="How can we help you?" rows={4} className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm resize-none"></textarea>
-               </div>
-               <button type="submit" className="w-full bg-gold text-forest py-4 font-bold hover:bg-gold-hover transition-colors rounded-sm tracking-wide mt-2">
-                 Send Secure Message
-               </button>
-             </form>
+             <ContactForm />
           </FadeIn>
         </div>
       </section>
