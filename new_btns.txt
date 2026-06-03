@@ -1,0 +1,126 @@
+30:          className="w-full text-left py-6 md:py-8 flex justify-between items-start md:items-center gap-6"
+32:          <div className="flex items-start md:items-center gap-6 md:gap-8 flex-1">
+33:            <span className={`text-2xl md:text-3xl font-serif font-bold transition-colors ${open ? 'text-[#D4B46A]' : 'text-[#D4B46A]/30 group-hover:text-[#D4B46A]/50'}`}>{num}</span>
+34:            <span className={`font-serif text-xl md:text-2xl pr-4 transition-colors ${open ? 'text-[#D4B46A]' : 'text-offwhite group-hover:text-offwhite/90'}`}>{question}</span>
+36:          <div className={`mt-1 md:mt-0 w-10 h-10 shrink-0 rounded-full flex items-center justify-center border transition-all duration-300 ${open ? 'border-[#D4B46A] bg-[#D4B46A] text-forest' : 'border-[#D4B46A]/20 text-[#D4B46A] group-hover:border-[#D4B46A]/50'}`}>
+95:      <div className="bg-forest border border-[#D4B46A]/20 p-8 rounded-sm text-center h-full flex flex-col items-center justify-center min-h-[400px]">
+116:        <div className="bg-red-900/20 border border-red-500/50 text-red-200 p-4 rounded-sm text-sm">
+121:        <input type="text" name="name" required placeholder="Full Name" className="w-full bg-forest border border-[#D4B46A]/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-[#D4B46A] transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+124:        <input type="email" name="email" required placeholder="Email Address" className="w-full bg-forest border border-[#D4B46A]/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-[#D4B46A] transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+127:        <input type="tel" name="phone" required placeholder="Phone Number" className="w-full bg-forest border border-[#D4B46A]/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-[#D4B46A] transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+130:        <textarea name="message" required placeholder="How can we help you?" rows={4} className="w-full bg-forest border border-[#D4B46A]/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-[#D4B46A] transition-colors rounded-sm resize-none disabled:opacity-50" disabled={status === 'submitting'}></textarea>
+134:      <button type="submit" disabled={status === 'submitting'} className="w-full bg-[#D4B46A] text-forest py-4 font-bold hover:bg-[#D4B46A]-hover transition-colors rounded-sm tracking-wide mt-2 disabled:bg-[#D4B46A]/70 flex justify-center items-center gap-2">
+192:      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-4' : 'bg-transparent py-6'}`}>
+198:          <nav className="hidden lg:flex items-center gap-8">
+207:            <a href="tel:+12505036992" className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 py-2.5 rounded-sm font-semibold hover:bg-[#D4B46A] hover:text-forest transition-colors shadow-lg flex items-center gap-2">
+221:        <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-[#D4B46A] rounded-full blur-[180px] opacity-15 mix-blend-screen pointer-events-none" />
+223:        <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full pb-20 lg:pb-0">
+228:            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-[#D4B46A] text-xs font-bold tracking-widest uppercase mb-8 backdrop-blur-sm shadow-xl shadow-black/10 mx-auto lg:mx-0">
+240:            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
+241:              <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-[#D4B46A] text-forest px-8 py-4 rounded-sm font-bold tracking-wide flex items-center justify-center gap-2 hover:bg-[#D4B46A]-hover hover:-translate-y-0.5 hover:shadow-xl transition-all">
+244:              <a href="tel:+12505036992" className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-8 py-4 rounded-sm font-bold tracking-wide flex items-center justify-center gap-2 hover:bg-[#D4B46A]/10 transition-all">
+254:             <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-md aspect-[3/4] p-3 shadow-2xl relative mx-auto lg:mx-0">
+260:                  <img src="https://lh3.googleusercontent.com/d/1Gt6GpVuorZXZoYuFXuZu4IXYo5GUXIqW" referrerPolicy="no-referrer" alt="Harmann Gill Presenting Blueprint" className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105" />
+261:                  <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/20 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none" />
+267:                  className="absolute -bottom-6 -left-4 sm:-left-8 md:-left-12 bg-forest-dark/95 backdrop-blur-md p-4 sm:p-5 md:p-6 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex items-center gap-3 sm:gap-4 md:gap-5 z-20 border border-[#D4B46A]/30 w-max max-w-[260px] sm:max-w-none"
+276:                    <div className="flex items-center gap-px sm:gap-1 mb-1 text-[#D4B46A]">
+296:          <div className="grid md:grid-cols-3 gap-8 mb-16">
+302:               <FadeIn key={i} delay={i * 0.15} className="bg-[#FCFBF7] p-10 border border-[#D4B46A]/10 rounded-none shadow-sm hover:border-[#D4B46A]/30 transition-colors duration-500">
+310:            <button onClick={() => setCtaModalOpen(true)} className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-widest hover:bg-[#D4B46A]-hover hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,180,106,0.3)] transition-all text-sm sm:text-base md:text-lg uppercase w-full sm:w-auto group">
+311:              Start Your Journey Today <ArrowRight size={20} className="shrink-0 group-hover:translate-x-2 transition-transform duration-300" />
+325:            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+327:                  <FadeIn key={i} delay={i * 0.1} className={`p-10 rounded-sm transition-all duration-300 group flex flex-col items-start ${svc.gold ? 'bg-forest-dark border border-[#D4B46A]/40 shadow-[0_15px_40px_rgba(212,180,106,0.15)] hover:-translate-y-2 relative overflow-hidden' : 'bg-forest-dark border border-[#D4B46A]/10 shadow-sm hover:border-[#D4B46A]/30 hover:-translate-y-2'}`}>
+328:                    {svc.gold && <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4B46A]/5 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none block z-0"></div>}
+329:                    <div className={`relative z-10 w-16 h-16 rounded-full flex items-center justify-center mb-8 transition-colors ${svc.gold ? 'bg-gradient-to-br from-gold to-[#bda15e] text-forest-dark shadow-lg' : 'bg-[#D4B46A]/10 text-[#D4B46A] group-hover:bg-[#D4B46A]/20'}`}>
+336:                       <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="relative z-10 mt-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-[#bda15e] text-forest-dark px-7 py-3.5 rounded-sm font-bold tracking-widest hover:from-[#bda15e] hover:to-gold hover:-translate-y-1 transition-all shadow-[0_10px_20px_rgba(212,180,106,0.3)] text-[11px] uppercase overflow-hidden group/btn w-full sm:w-auto">
+337:                          <span className="relative z-10 flex items-center gap-2">Professional Application <Users size={14} /></span>
+338:                          <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+349:        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4B46A]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/3 pointer-events-none block z-0"></div>
+353:            <p className="text-slate-light text-lg">We take the guesswork out of financial planning with a clear, step-by-step approach designed to give you total clarity and control.</p>
+356:          <div className="grid md:grid-cols-4 gap-8 relative">
+357:            <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-[#D4B46A]/10 z-0"></div>
+385:              <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-widest hover:bg-[#D4B46A]-hover hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,180,106,0.2)] transition-all text-sm md:text-base uppercase w-full sm:w-auto group">
+386:                 <Calendar className="w-5 h-5 shrink-0 transition-transform group-hover:scale-110" /> Book My Free Session Now
+394:        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+399:                <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4">
+404:                    <div key={i} className="flex items-start gap-3">
+411:             <FadeIn delay={0.2} className="relative h-full min-h-[400px] bg-forest-dark border border-[#D4B46A]/20 rounded-sm p-10 flex flex-col justify-center border-l-4 border-l-gold">
+421:        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#D4B46A]/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none block"></div>
+422:        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+427:                    <img src="https://lh3.googleusercontent.com/d/1yWzO7PO23M9EOARsJ3sMstUqcgx2n51s" referrerPolicy="no-referrer" alt="Harmann Gill" className="absolute inset-0 w-full h-full object-cover object-[center_10%] transition-transform duration-1000 group-hover:scale-[1.05]" />
+428:                    <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/10 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-70" />
+429:                    <div className="absolute inset-4 border border-[#D4B46A]/20 rounded-sm pointer-events-none transition-all duration-700 group-hover:scale-[0.96] group-hover:border-[#D4B46A]/40" />
+430:                    <div className="relative z-10 bottom-8 px-8 pt-6 transform transition-transform duration-500 group-hover:translate-y-[-5px]">
+432:                       <p className="text-[#D4B46A] text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+440:              <div className="inline-flex items-center gap-3 mb-6">
+468:                <div className="pt-10 flex flex-col sm:flex-row flex-wrap items-center sm:items-start gap-4">
+469:                  <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-[#D4B46A]-hover transition-colors shadow-lg text-sm uppercase w-full sm:w-auto hover:-translate-y-1 hover:shadow-gold/20">
+472:                  <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-[#D4B46A]/10 hover:-translate-y-1 transition-all text-sm uppercase w-full sm:w-auto">
+475:                  <a href="tel:+12505036992" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-white/5 hover:-translate-y-1 transition-all text-sm uppercase w-full sm:w-auto">
+486:        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] border border-[#D4B46A]/5 rounded-full" />
+495:           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+502:                <FadeIn key={i} delay={i*0.1} className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all duration-300 rounded-sm backdrop-blur-sm group hover:scale-105 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:border-[#D4B46A]/30">
+503:                  <h3 className="text-xl font-serif text-offwhite mb-4 group-hover:text-[#D4B46A] transition-colors duration-300">{ws.title}</h3>
+504:                  <p className="text-sm text-offwhite/70 leading-relaxed group-hover:text-offwhite/90 transition-colors duration-300">{ws.desc}</p>
+509:           <FadeIn delay={0.4} className="flex justify-center flex-col sm:flex-row flex-wrap gap-4">
+523:        <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+534:                   <li key={i} className="flex items-start gap-4 p-6 bg-forest-dark border border-[#D4B46A]/10 rounded-sm hover:border-[#D4B46A]/30 transition-colors">
+547:                <div className="absolute inset-0 bg-[#D4B46A]/10 z-10 group-hover:opacity-0 transition-opacity duration-700 pointer-events-none"></div>
+551:                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-1000 scale-[1.05] group-hover:scale-100" 
+566:            <div className="grid md:grid-cols-3 gap-8">
+572:                <FadeIn key={i} delay={i*0.1} className="bg-forest-dark border border-[#D4B46A]/10 p-10 rounded-sm shadow-sm relative pt-12">
+573:                   <div className="absolute top-0 right-10 -translate-y-1/2 w-14 h-14 bg-forest border border-[#D4B46A]/20 text-[#D4B46A] rounded-full flex items-center justify-center shadow-lg">
+586:        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4B46A]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none block z-0"></div>
+606:             <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 flex-wrap">
+607:               <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-[#D4B46A] text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:shadow-xl hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
+610:               <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:bg-[#D4B46A]/10 hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
+613:               <a href="tel:+12505036992" className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:bg-white/5 hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
+623:        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+629:              <a href="tel:+12505036992" className="flex items-center gap-6 group">
+630:                 <div className="w-14 h-14 bg-forest-dark border border-[#D4B46A]/20 text-[#D4B46A] rounded-full flex items-center justify-center group-hover:bg-[#D4B46A] group-hover:text-forest transition-colors shadow-sm">
+638:              <a href="mailto:itsharmanngill@gmail.com" className="flex items-center gap-6 group">
+639:                 <div className="w-14 h-14 bg-forest-dark border border-[#D4B46A]/20 text-[#D4B46A] rounded-full flex items-center justify-center group-hover:bg-[#D4B46A] group-hover:text-forest transition-colors shadow-sm">
+649:            <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest px-6 sm:px-8 py-4 rounded-sm font-bold tracking-wide hover:bg-[#D4B46A]-hover transition-all shadow-md w-full sm:w-auto text-sm sm:text-base text-center">
+654:          <FadeIn delay={0.2} className="bg-forest-dark p-10 md:p-12 rounded-sm border border-[#D4B46A]/10 shadow-xl">
+663:         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+664:         <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+688:                   <a href="tel:+12505036992" className="text-slate-light hover:text-[#D4B46A] transition-colors text-sm flex items-center gap-3">
+693:                   <a href="mailto:itsharmanngill@gmail.com" className="text-slate-light hover:text-[#D4B46A] transition-colors text-sm flex items-center gap-3">
+698:                   <span className="text-slate-light text-sm flex items-center gap-3 cursor-default">
+715:         <div className="max-w-7xl mx-auto px-6 py-6 border-t border-[#D4B46A]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-light text-center md:text-left">
+717:           <div className="flex flex-wrap justify-center md:justify-end gap-6">
+729:        className="fixed bottom-24 md:bottom-8 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_8px_30px_rgba(37,211,102,0.6)] transition-all duration-300 md:bottom-8 flex items-center justify-center group"
+735:        <div className="absolute -left-36 top-1/2 -translate-y-1/2 bg-white text-forest text-sm font-bold px-4 py-2 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-lg whitespace-nowrap">
+741:      <div className="fixed bottom-0 left-0 right-0 z-40 bg-forest-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] border-t border-[#D4B46A]/10 p-3 flex gap-3 md:hidden">
+742:         <a href="tel:+12505036992" className="flex-1 bg-[#D4B46A] text-forest border border-[#D4B46A] py-3.5 rounded-sm font-bold flex items-center justify-center gap-2">
+745:         <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="flex-1 bg-[#D4B46A] text-forest py-3.5 rounded-sm font-bold flex items-center justify-center gap-2">
+753:           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+757:                className="absolute inset-0 bg-forest-dark/90 backdrop-blur-sm"
+765:                 <button onClick={() => setCtaModalOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-[#D4B46A] transition-colors p-2 bg-forest rounded-full z-20 shadow-sm border border-[#D4B46A]/10">
+769:                 <div className="p-6 md:p-10 text-center border-b border-[#D4B46A]/10 bg-forest-dark">
+775:                    <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="p-8 md:p-12 text-center hover:bg-forest transition-colors group relative overflow-hidden">
+776:                       <div className="w-16 h-16 md:w-20 md:h-20 bg-forest rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-[#D4B46A] group-hover:scale-110 group-hover:bg-[#D4B46A] transition-all duration-500">
+777:                          <CheckCircle2 size={30} className="md:w-9 md:h-9 group-hover:text-forest" />
+781:                       <span className="inline-flex items-center gap-2 text-[#D4B46A] font-bold uppercase tracking-wider text-[10px] md:text-xs group-hover:text-[#D4B46A]-hover">
+785:                    <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="p-8 md:p-12 text-center hover:bg-forest transition-colors group relative overflow-hidden">
+786:                       <div className="w-16 h-16 md:w-20 md:h-20 bg-forest rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-[#D4B46A] group-hover:scale-110 group-hover:bg-[#D4B46A] transition-all duration-500">
+787:                          <Users size={30} className="md:w-9 md:h-9 group-hover:text-forest" />
+791:                       <span className="inline-flex items-center gap-2 text-[#D4B46A] font-bold uppercase tracking-wider text-[10px] md:text-xs group-hover:text-[#D4B46A]-hover">
+804:          <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
+808:               className="absolute inset-0 bg-forest-dark/90 backdrop-blur-sm"
+816:                 <button onClick={() => setPrivacyPolicyOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-[#D4B46A] transition-colors p-2 bg-forest rounded-full z-30 shadow-sm border border-[#D4B46A]/10">
+820:                 <div className="p-8 border-b border-[#D4B46A]/10 bg-forest-dark flex-shrink-0">
+825:                 <div className="p-8 overflow-y-auto text-slate-light leading-relaxed prose prose-invert mx-auto w-full text-[15px]">
+845:          <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
+849:               className="absolute inset-0 bg-forest-dark/90 backdrop-blur-sm"
+857:                 <button onClick={() => setTermsOfServiceOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-[#D4B46A] transition-colors p-2 bg-forest rounded-full z-30 shadow-sm border border-[#D4B46A]/10">
+861:                 <div className="p-8 border-b border-[#D4B46A]/10 bg-forest-dark flex-shrink-0">
+866:                 <div className="p-8 overflow-y-auto text-slate-light leading-relaxed prose prose-invert mx-auto w-full text-[15px]">
+895:               className="absolute inset-0 bg-forest/90 backdrop-blur-md"
+899:               className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-forest-dark shadow-2xl flex flex-col border-l border-[#D4B46A]/10"
+901:                <div className="p-6 flex justify-between items-center border-b border-[#D4B46A]/10 bg-forest">
+903:                   <button onClick={() => setMobileMenuOpen(false)} className="text-offwhite hover:text-[#D4B46A] p-2 bg-forest-dark rounded-full shadow-sm border border-[#D4B46A]/10">
+907:                <div className="flex-1 overflow-y-auto p-8 flex flex-col gap-6">
+914:                <div className="p-6 bg-forest mt-auto border-t border-[#D4B46A]/10 pb-24">
+915:                   <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full bg-[#D4B46A] text-forest py-4 rounded-sm font-bold flex items-center justify-center gap-2 shadow-md hover:bg-[#D4B46A]-hover transition-colors mb-3">
+918:                   <a href="tel:+12505036992" onClick={() => setMobileMenuOpen(false)} className="w-full bg-[#D4B46A] text-forest border border-[#D4B46A] py-4 rounded-sm font-bold flex items-center justify-center gap-2 shadow-md hover:bg-[#D4B46A]/10 transition-colors">

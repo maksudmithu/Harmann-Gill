@@ -24,16 +24,16 @@ function FAQItem({ question, answer, index }: any) {
   
   return (
     <FadeIn delay={index * 0.1}>
-      <div className={`border-b border-gold/10 overflow-hidden transition-all duration-300 group ${open ? 'bg-forest-dark/30' : 'hover:bg-forest-dark/20'}`}>
+      <div className={`border-b border-[#D4B46A]/10 overflow-hidden transition-all duration-300 group ${open ? 'bg-forest-dark/30' : 'hover:bg-forest-dark/20'}`}>
         <button 
           onClick={() => setOpen(!open)}
           className="w-full text-left py-6 md:py-8 flex justify-between items-start md:items-center gap-6"
         >
           <div className="flex items-start md:items-center gap-6 md:gap-8 flex-1">
-            <span className={`text-2xl md:text-3xl font-serif font-bold transition-colors ${open ? 'text-gold' : 'text-gold/30 group-hover:text-gold/50'}`}>{num}</span>
-            <span className={`font-serif text-xl md:text-2xl pr-4 transition-colors ${open ? 'text-gold' : 'text-offwhite group-hover:text-offwhite/90'}`}>{question}</span>
+            <span className={`text-2xl md:text-3xl font-serif font-bold transition-colors ${open ? 'text-[#D4B46A]' : 'text-[#D4B46A]/30 group-hover:text-[#D4B46A]/50'}`}>{num}</span>
+            <span className={`font-serif text-xl md:text-2xl pr-4 transition-colors ${open ? 'text-[#D4B46A]' : 'text-offwhite group-hover:text-offwhite/90'}`}>{question}</span>
           </div>
-          <div className={`mt-1 md:mt-0 w-10 h-10 shrink-0 rounded-full flex items-center justify-center border transition-all duration-300 ${open ? 'border-gold bg-gold text-forest' : 'border-gold/20 text-gold group-hover:border-gold/50'}`}>
+          <div className={`mt-1 md:mt-0 w-10 h-10 shrink-0 rounded-full flex items-center justify-center border transition-all duration-300 ${open ? 'border-[#D4B46A] bg-[#D4B46A] text-forest' : 'border-[#D4B46A]/20 text-[#D4B46A] group-hover:border-[#D4B46A]/50'}`}>
              <ChevronDown className={`transition-transform duration-300 ${open ? 'rotate-180' : ''}`} size={20} />
           </div>
         </button>
@@ -92,9 +92,9 @@ function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="bg-forest border border-gold/20 p-8 rounded-sm text-center h-full flex flex-col items-center justify-center min-h-[400px]">
-        <div className="w-16 h-16 bg-forest-dark border border-gold/30 rounded-full flex items-center justify-center mb-6 mx-auto">
-          <CheckCircle2 className="text-gold" size={32} />
+      <div className="bg-forest border border-[#D4B46A]/20 p-8 rounded-sm text-center h-full flex flex-col items-center justify-center min-h-[400px]">
+        <div className="w-16 h-16 bg-forest-dark border border-[#D4B46A]/30 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <CheckCircle2 className="text-[#D4B46A]" size={32} />
         </div>
         <h4 className="text-2xl font-serif text-offwhite mb-4">Message Sent</h4>
         <p className="text-slate-light leading-relaxed mb-8">
@@ -102,7 +102,7 @@ function ContactForm() {
         </p>
         <button 
           onClick={() => setStatus('idle')}
-          className="border border-gold text-gold px-8 py-3 rounded-sm font-bold tracking-wide hover:bg-gold hover:text-forest transition-colors"
+          className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-8 py-3 rounded-sm font-bold tracking-wide hover:bg-[#D4B46A] hover:text-forest transition-colors"
         >
           Send Another Message
         </button>
@@ -118,20 +118,20 @@ function ContactForm() {
         </div>
       )}
       <div>
-        <input type="text" name="name" required placeholder="Full Name" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+        <input type="text" name="name" required placeholder="Full Name" className="w-full bg-forest border border-[#D4B46A]/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-[#D4B46A] transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
       </div>
       <div>
-        <input type="email" name="email" required placeholder="Email Address" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+        <input type="email" name="email" required placeholder="Email Address" className="w-full bg-forest border border-[#D4B46A]/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-[#D4B46A] transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
       </div>
       <div>
-        <input type="tel" name="phone" required placeholder="Phone Number" className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
+        <input type="tel" name="phone" required placeholder="Phone Number" className="w-full bg-forest border border-[#D4B46A]/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-[#D4B46A] transition-colors rounded-sm disabled:opacity-50" disabled={status === 'submitting'} />
       </div>
       <div>
-        <textarea name="message" required placeholder="How can we help you?" rows={4} className="w-full bg-forest border border-gold/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-gold transition-colors rounded-sm resize-none disabled:opacity-50" disabled={status === 'submitting'}></textarea>
+        <textarea name="message" required placeholder="How can we help you?" rows={4} className="w-full bg-forest border border-[#D4B46A]/20 text-offwhite placeholder:text-slate-light p-4 outline-none focus:border-[#D4B46A] transition-colors rounded-sm resize-none disabled:opacity-50" disabled={status === 'submitting'}></textarea>
       </div>
       {/* Honeypot field for FormSubmit */}
       <input type="text" name="_honey" style={{ display: 'none' }} />
-      <button type="submit" disabled={status === 'submitting'} className="w-full bg-gold text-forest py-4 font-bold hover:bg-gold-hover transition-colors rounded-sm tracking-wide mt-2 disabled:bg-gold/70 flex justify-center items-center gap-2">
+      <button type="submit" disabled={status === 'submitting'} className="w-full bg-[#D4B46A] text-forest py-4 font-bold hover:bg-[#c2a155] transition-colors rounded-sm tracking-wide mt-2 disabled:bg-[#D4B46A]/70 flex justify-center items-center gap-2">
         {status === 'submitting' ? (
           <>
             <div className="w-5 h-5 border-2 border-forest/30 border-t-forest rounded-full animate-spin"></div>
@@ -159,12 +159,8 @@ export default function App() {
   }, []);
 
   const navLinks = [
-    { label: 'About', href: '#story' },
+    { label: 'My Story', href: '#story' },
     { label: 'Services', href: '#services' },
-    { label: 'Workshops', href: '#workshops' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Contact', href: '#contact' },
   ];
 
   const SERVICES = [
@@ -179,7 +175,6 @@ export default function App() {
   const FAQS = [
     { q: 'Do I need a lot of money to get started?', a: 'Not at all — and this is the biggest myth in financial planning. You can start with as little as $50 a month. What matters most isn\'t how much you start with, it\'s starting. The sooner we create a plan around your current reality, the more options you have as your income grows.' },
     { q: 'How does the free discovery session work?', a: 'It\'s a relaxed, 45-minute conversation — zero pressure, zero sales pitch. Harmann listens to where you are, what you want, and what\'s holding you back. You\'ll leave with clarity and a clear direction, whether or not you decide to move forward. There is absolutely no obligation.' },
-    { q: 'What makes your approach different from a typical bank advisor?', a: 'Banks often push their own proprietary products. As an independent consultant, I work for you, not a specific financial institution. This means I have the freedom to shop the entire market to find the best solutions tailored specifically to your goals, with complete transparency.' },
     { q: 'How often will we review my financial plan?', a: 'Life changes, and your financial plan should evolve with it. We typically schedule comprehensive reviews annually, but I\'m always available for check-ins whenever there\'s a major life event—like a job change, buying a home, or growing your family—to ensure your strategy stays on track.' },
     { q: 'Can you help me plan for retirement if I\'m starting late?', a: 'Absolutely — and it\'s never too late to start. Harmann works with clients at every stage, including those who feel they\'ve lost time. We\'ll map out your retirement income goals, maximize what you have, and build a strategy to get you there with confidence.' },
     { q: 'Can we meet virtually if I\'m outside the local area?', a: 'Yes — most sessions are conducted virtually via video call, making it easy and convenient wherever you are. Harmann works with clients across Canada and the United States, and virtual meetings are just as thorough and personal as in-person ones.' }
@@ -197,19 +192,19 @@ export default function App() {
           
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map(link => (
-              <a key={link.label} href={link.href} className="text-sm tracking-wide font-medium hover:text-gold transition-colors text-offwhite/90">
+              <a key={link.label} href={link.href} className="text-sm tracking-wide font-medium hover:text-[#D4B46A] transition-colors text-offwhite/90">
                 {link.label}
               </a>
             ))}
-            <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-gold text-forest px-6 py-2.5 rounded-sm font-semibold hover:bg-gold-hover transition-colors shadow-lg">
+            <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-[#D4B46A] text-forest px-6 py-2.5 rounded-sm font-semibold hover:bg-[#c2a155] transition-colors shadow-lg">
               Book Free Session
             </a>
-            <a href="tel:+12505036992" className="border border-gold text-gold px-6 py-2.5 rounded-sm font-semibold hover:bg-gold hover:text-forest transition-colors shadow-lg flex items-center gap-2">
+            <a href="tel:+12505036992" className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 py-2.5 rounded-sm font-semibold hover:bg-[#D4B46A] hover:text-forest transition-colors shadow-lg flex items-center gap-2">
               <Phone size={16} /> Call Now
             </a>
           </nav>
           
-          <button className="lg:hidden text-offwhite hover:text-gold transition-colors" onClick={() => setMobileMenuOpen(true)}>
+          <button className="lg:hidden text-offwhite hover:text-[#D4B46A] transition-colors" onClick={() => setMobileMenuOpen(true)}>
             <Menu size={28} />
           </button>
         </div>
@@ -218,14 +213,14 @@ export default function App() {
       {/* --- HERO --- */}
       <section className="relative min-h-[95vh] hero-bg flex items-center pt-24 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
-        <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-gold rounded-full blur-[180px] opacity-15 mix-blend-screen pointer-events-none" />
+        <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-[#D4B46A] rounded-full blur-[180px] opacity-15 mix-blend-screen pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full pb-20 lg:pb-0">
           <motion.div 
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left mt-10 lg:mt-0"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-gold text-xs font-bold tracking-widest uppercase mb-8 backdrop-blur-sm shadow-xl shadow-black/10 mx-auto lg:mx-0">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-[#D4B46A] text-xs font-bold tracking-widest uppercase mb-8 backdrop-blur-sm shadow-xl shadow-black/10 mx-auto lg:mx-0">
               <Award size={14} /> Licensed Professional
             </div>
             
@@ -238,10 +233,10 @@ export default function App() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-              <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-gold text-forest px-8 py-4 rounded-sm font-bold tracking-wide flex items-center justify-center gap-2 hover:bg-gold-hover hover:-translate-y-0.5 hover:shadow-xl transition-all">
-                Book A Free Session <ArrowRight size={18} />
+              <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-[#D4B46A] text-forest px-8 py-4 rounded-sm font-bold tracking-wide flex items-center justify-center gap-2 hover:bg-[#c2a155] hover:-translate-y-0.5 hover:shadow-xl transition-all">
+                Book Free Session <ArrowRight size={18} />
               </a>
-              <a href="tel:+12505036992" className="border-2 border-gold text-gold px-8 py-4 rounded-sm font-bold tracking-wide flex items-center justify-center gap-2 hover:bg-gold/10 transition-all">
+              <a href="tel:+12505036992" className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-8 py-4 rounded-sm font-bold tracking-wide flex items-center justify-center gap-2 hover:bg-[#D4B46A]/10 transition-all">
                 <Phone size={18} /> Call Now
               </a>
             </div>
@@ -253,10 +248,10 @@ export default function App() {
           >
              <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-md aspect-[3/4] p-3 shadow-2xl relative mx-auto lg:mx-0">
                 {/* Decorative border backdrop */}
-                <div className="absolute inset-0 border border-gold/20 rounded-t-[140px] rounded-b-sm transform translate-x-3 -translate-y-3 sm:translate-x-4 sm:-translate-y-4"></div>
-                <div className="absolute inset-0 border border-gold/10 rounded-t-[140px] rounded-b-sm bg-gradient-to-tr from-gold/5 to-transparent"></div>
+                <div className="absolute inset-0 border border-[#D4B46A]/20 rounded-t-[140px] rounded-b-sm transform translate-x-3 -translate-y-3 sm:translate-x-4 sm:-translate-y-4"></div>
+                <div className="absolute inset-0 border border-[#D4B46A]/10 rounded-t-[140px] rounded-b-sm bg-gradient-to-tr from-gold/5 to-transparent"></div>
                 
-                <div className="w-full h-full rounded-t-[140px] rounded-b-sm border border-gold/30 overflow-hidden relative group bg-forest-dark shadow-[0_20px_50px_rgba(0,0,0,0.4)] z-10">
+                <div className="w-full h-full rounded-t-[140px] rounded-b-sm border border-[#D4B46A]/30 overflow-hidden relative group bg-forest-dark shadow-[0_20px_50px_rgba(0,0,0,0.4)] z-10">
                   <img src="https://lh3.googleusercontent.com/d/1Gt6GpVuorZXZoYuFXuZu4IXYo5GUXIqW" referrerPolicy="no-referrer" alt="Harmann Gill Presenting Blueprint" className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/20 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none" />
                 </div>
@@ -264,20 +259,20 @@ export default function App() {
                 {/* Floating trust badge */}
                 <motion.div 
                   initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8 }}
-                  className="absolute -bottom-6 -left-4 sm:-left-8 md:-left-12 bg-forest-dark/95 backdrop-blur-md p-4 sm:p-5 md:p-6 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex items-center gap-3 sm:gap-4 md:gap-5 z-20 border border-gold/30 w-max max-w-[260px] sm:max-w-none"
+                  className="absolute -bottom-6 -left-4 sm:-left-8 md:-left-12 bg-[#FCFBF7] backdrop-blur-md p-4 sm:p-5 md:p-6 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex items-center gap-3 sm:gap-4 md:gap-5 z-20 border border-[#D4B46A]/30 w-max max-w-[260px] sm:max-w-none"
                 >
                   <div className="relative flex-shrink-0">
-                     <div className="absolute inset-0 border border-gold/40 rounded-full animate-ping opacity-20"></div>
+                     <div className="absolute inset-0 border border-[#D4B46A]/40 rounded-full animate-ping opacity-20"></div>
                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-gold to-[#bda15e] rounded-full flex items-center justify-center shadow-inner relative z-10">
                        <ShieldCheck size={28} className="text-forest-dark w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                      </div>
                   </div>
                   <div className="flex px-1 flex-col justify-center">
-                    <div className="flex items-center gap-px sm:gap-1 mb-1 text-gold">
+                    <div className="flex items-center gap-px sm:gap-1 mb-1 text-[#D4B46A]">
                        {[...Array(5)].map((_, i) => <Star key={i} size={10} className="fill-current sm:w-3 sm:h-3" />)}
                     </div>
-                    <p className="text-offwhite font-serif font-bold text-sm sm:text-base md:text-lg leading-tight tracking-wide">Licensed & Trusted</p>
-                    <p className="text-gold/80 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest font-bold mt-0.5 sm:mt-1">Financial Professional</p>
+                    <p className="text-forest font-serif font-bold text-sm sm:text-base md:text-lg leading-tight tracking-wide">Licensed & Trusted</p>
+                    <p className="text-[#D4B46A]/80 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest font-bold mt-0.5 sm:mt-1">Wealth Consultant</p>
                   </div>
                 </motion.div>
              </div>
@@ -299,38 +294,38 @@ export default function App() {
               { t: 'Product-Focused', d: 'Accumulating accounts without a unified blueprint leaves significant blind spots.' },
               { t: 'The Missing Blueprint', d: 'You need an overarching strategy that ties everything together into one reliable path forward.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.15} className="bg-forest-dark p-10 border border-gold/10 rounded-none shadow-sm hover:border-gold/30 transition-colors duration-500">
-                 <h3 className="text-xl font-serif text-gold border-b border-gold/20 pb-4 mb-5 font-semibold">{item.t}</h3>
-                 <p className="text-slate flex-1 leading-relaxed text-[15px]">{item.d}</p>
+               <FadeIn key={i} delay={i * 0.15} className="bg-[#FCFBF7] p-10 border border-[#D4B46A]/10 rounded-none shadow-sm hover:border-[#D4B46A]/30 transition-colors duration-500">
+                 <h3 className="text-xl font-serif text-[#F2E6B3] border-b border-[#D4B46A]/20 pb-4 mb-5 font-semibold">{item.t}</h3>
+                 <p className="text-[#F2E6B3] flex-1 leading-relaxed text-[15px]">{item.d}</p>
                </FadeIn>
             ))}
           </div>
           
           <FadeIn delay={0.4} className="text-center">
-            <button onClick={() => setCtaModalOpen(true)} className="inline-flex items-center justify-center gap-3 bg-gold text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-widest hover:bg-gold-hover hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,180,106,0.3)] transition-all text-sm sm:text-base md:text-lg uppercase w-full sm:w-auto group">
-              Start Your Journey Today <ArrowRight size={20} className="shrink-0 group-hover:translate-x-2 transition-transform duration-300" />
+            <button onClick={() => setCtaModalOpen(true)} className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-widest hover:bg-[#c2a155] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,180,106,0.3)] transition-all text-sm sm:text-base md:text-lg uppercase w-full sm:w-auto group">
+              Strategy session + Career exploration <ArrowRight size={20} className="shrink-0 group-hover:translate-x-2 transition-transform duration-300" />
             </button>
           </FadeIn>
         </div>
       </section>
 
       {/* --- SERVICES --- */}
-      <section id="services" className="py-24 bg-forest border-t border-gold/10 relative">
+      <section id="services" className="py-24 bg-forest border-t border-[#D4B46A]/10 relative">
          <div className="max-w-7xl mx-auto px-6">
             <FadeIn>
               <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-4">Premium Services</h2>
-              <div className="w-20 h-1 bg-gold mb-16"></div>
+              <div className="w-20 h-1 bg-[#D4B46A] mb-16"></div>
             </FadeIn>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                {SERVICES.map((svc, i) => (
-                  <FadeIn key={i} delay={i * 0.1} className={`p-10 rounded-sm transition-all duration-300 group flex flex-col items-start ${svc.gold ? 'bg-forest-dark border border-gold/40 shadow-[0_15px_40px_rgba(212,180,106,0.15)] hover:-translate-y-2 relative overflow-hidden' : 'bg-forest-dark border border-gold/10 shadow-sm hover:border-gold/30 hover:-translate-y-2'}`}>
-                    {svc.gold && <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none block z-0"></div>}
-                    <div className={`relative z-10 w-16 h-16 rounded-full flex items-center justify-center mb-8 transition-colors ${svc.gold ? 'bg-gradient-to-br from-gold to-[#bda15e] text-forest-dark shadow-lg' : 'bg-gold/10 text-gold group-hover:bg-gold/20'}`}>
+                  <FadeIn key={i} delay={i * 0.1} className={`p-10 rounded-sm transition-all duration-300 group flex flex-col items-start ${svc.gold ? 'bg-[#FCFBF7] border border-[#D4B46A]/40 shadow-[0_15px_40px_rgba(212,180,106,0.15)] hover:-translate-y-2 relative overflow-hidden' : 'bg-[#FCFBF7] border border-[#D4B46A]/10 shadow-sm hover:border-[#D4B46A]/30 hover:-translate-y-2'}`}>
+                    {svc.gold && <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4B46A]/5 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none block z-0"></div>}
+                    <div className={`relative z-10 w-16 h-16 rounded-full flex items-center justify-center mb-8 transition-colors ${svc.gold ? 'bg-gradient-to-br from-gold to-[#bda15e] text-forest-dark shadow-lg' : 'bg-[#D4B46A]/10 text-[#D4B46A] group-hover:bg-[#D4B46A]/20'}`}>
                        <svc.icon size={28} strokeWidth={2} />
                     </div>
-                    <h3 className={`relative z-10 text-xl font-serif mb-4 font-semibold flex-1 ${svc.gold ? 'text-gold' : 'text-offwhite'}`}>{svc.title}</h3>
-                    <p className={`relative z-10 leading-relaxed text-[15px] ${svc.gold ? 'text-offwhite/90 mb-8' : 'text-slate-light'}`}>{svc.desc}</p>
+                    <h3 className={`relative z-10 text-xl font-serif mb-4 font-semibold flex-1 ${svc.gold ? 'text-[#D4B46A]' : 'text-forest'}`}>{svc.title}</h3>
+                    <p className={`relative z-10 leading-relaxed text-[15px] ${svc.gold ? 'text-forest/90 mb-8' : 'text-forest-dark'}`}>{svc.desc}</p>
                     
                     {svc.gold && (
                        <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="relative z-10 mt-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-[#bda15e] text-forest-dark px-7 py-3.5 rounded-sm font-bold tracking-widest hover:from-[#bda15e] hover:to-gold hover:-translate-y-1 transition-all shadow-[0_10px_20px_rgba(212,180,106,0.3)] text-[11px] uppercase overflow-hidden group/btn w-full sm:w-auto">
@@ -346,7 +341,7 @@ export default function App() {
 
       {/* --- OUR PROCESS --- */}
       <section className="py-24 bg-forest relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/3 pointer-events-none block z-0"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4B46A]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/3 pointer-events-none block z-0"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <FadeIn className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-6">Our Proven Process</h2>
@@ -354,7 +349,7 @@ export default function App() {
           </FadeIn>
           
           <div className="grid md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-gold/10 z-0"></div>
+            <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-[#D4B46A]/10 z-0"></div>
             {[
               { num: '01', title: 'Discovery', desc: 'We explore your current financial standing, goals, and obligations in a no-pressure consultation.' },
               { num: '02', title: 'Analysis', desc: 'We identify critical gaps in your wealth protection and retirement plans.' },
@@ -362,8 +357,8 @@ export default function App() {
               { num: '04', title: 'Implementation', desc: 'We help you put the right tools in place and provide ongoing review to keep you on track.' }
             ].map((step, i) => (
                <FadeIn key={i} delay={i * 0.15} className="relative z-10 flex flex-col items-center text-center">
-                 <div className="w-24 h-24 bg-forest-dark border-2 border-gold/30 rounded-full flex items-center justify-center mb-6 shadow-[0_10px_20px_rgba(0,0,0,0.5)] group hover:border-gold hover:scale-105 transition-all duration-300">
-                    <span className="text-3xl font-serif text-gold font-bold">{step.num}</span>
+                 <div className="w-24 h-24 bg-[#FCFBF7] border-2 border-[#D4B46A]/30 rounded-full flex items-center justify-center mb-6 shadow-[0_10px_20px_rgba(0,0,0,0.5)] group hover:border-[#D4B46A] hover:scale-105 transition-all duration-300">
+                    <span className="text-3xl font-serif text-[#D4B46A] font-bold">{step.num}</span>
                  </div>
                  <h3 className="text-xl font-serif text-offwhite mb-3 font-semibold">{step.title}</h3>
                  <p className="text-slate-light text-sm leading-relaxed max-w-[250px]">{step.desc}</p>
@@ -374,7 +369,7 @@ export default function App() {
       </section>
 
       {/* --- MID-PAGE CTA --- */}
-      <section className="py-20 bg-forest-dark border-t border-gold/10 relative overflow-hidden">
+      <section className="py-20 bg-forest-dark border-t border-[#D4B46A]/10 relative overflow-hidden">
          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/5 via-forest-dark to-forest-dark pointer-events-none"></div>
          <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
             <FadeIn>
@@ -382,15 +377,15 @@ export default function App() {
               <p className="text-slate-light text-lg md:text-xl leading-relaxed mb-10 max-w-3xl mx-auto">
                 Your free session is a no-pressure conversation about where you are, where you want to be, and how to get there. No obligation. No jargon.
               </p>
-              <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-gold text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-widest hover:bg-gold-hover hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,180,106,0.2)] transition-all text-sm md:text-base uppercase w-full sm:w-auto group">
-                 <Calendar className="w-5 h-5 shrink-0 transition-transform group-hover:scale-110" /> Book My Free Session Now
+              <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-widest hover:bg-[#c2a155] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,180,106,0.2)] transition-all text-sm md:text-base uppercase w-full sm:w-auto group">
+                 <Calendar className="w-5 h-5 shrink-0 transition-transform group-hover:scale-110" /> Book Free Session
               </a>
             </FadeIn>
          </div>
       </section>
 
       {/* --- WHY WORK WITH ME --- */}
-      <section className="py-24 bg-forest border-y border-gold/10">
+      <section className="py-24 bg-forest border-y border-[#D4B46A]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
              <FadeIn>
                 <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-6">Why Partner With Harmann?</h2>
@@ -402,35 +397,35 @@ export default function App() {
                     'Long-Term Relationship Approach', 'Guidance With Simplicity', 'Confidence Through Planning'
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-gold shrink-0 mt-0.5" size={20} />
+                      <CheckCircle2 className="text-[#D4B46A] shrink-0 mt-0.5" size={20} />
                       <span className="text-offwhite font-medium text-[15px]">{item}</span>
                     </div>
                   ))}
                 </div>
              </FadeIn>
-             <FadeIn delay={0.2} className="relative h-full min-h-[400px] bg-forest-dark border border-gold/20 rounded-sm p-10 flex flex-col justify-center border-l-4 border-l-gold">
-                <Quote size={56} className="text-gold/20 mb-8" />
-                <h3 className="text-2xl md:text-3xl font-serif text-offwhite leading-snug mb-6">"The goal is not to accumulate a bunch of products, but to design a life of complete financial confidence."</h3>
-                <p className="font-bold text-gold uppercase tracking-widest text-sm">— Harmann Gill</p>
+             <FadeIn delay={0.2} className="relative h-full min-h-[400px] bg-[#FCFBF7] border border-[#D4B46A]/20 rounded-sm p-10 flex flex-col justify-center border-l-4 border-[#D4B46A]">
+                <Quote size={56} className="text-[#D4B46A]/20 mb-8" />
+                <h3 className="text-2xl md:text-3xl font-serif text-forest leading-snug mb-6">"The goal is not to accumulate a bunch of products, but to design a life of complete financial confidence."</h3>
+                <p className="font-bold text-[#D4B46A] uppercase tracking-widest text-sm">— Harmann Gill</p>
              </FadeIn>
         </div>
       </section>
 
       {/* --- MY STORY --- */}
-      <section id="story" className="py-24 bg-forest border-y border-gold/10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none block"></div>
+      <section id="story" className="py-24 bg-forest border-y border-[#D4B46A]/10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#D4B46A]/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none block"></div>
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
            <FadeIn className="order-2 lg:order-1 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                 <div className="absolute -inset-4 border border-gold/20 rounded-sm pointer-events-none z-0 transform translate-x-2 translate-y-2 lg:translate-x-4 lg:translate-y-4"></div>
+                 <div className="absolute -inset-4 border border-[#D4B46A]/20 rounded-sm pointer-events-none z-0 transform translate-x-2 translate-y-2 lg:translate-x-4 lg:translate-y-4"></div>
                  <div className="relative aspect-[3/4] bg-forest-dark rounded-sm overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col justify-end group z-10">
                     <img src="https://lh3.googleusercontent.com/d/1yWzO7PO23M9EOARsJ3sMstUqcgx2n51s" referrerPolicy="no-referrer" alt="Harmann Gill" className="absolute inset-0 w-full h-full object-cover object-[center_10%] transition-transform duration-1000 group-hover:scale-[1.05]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/10 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-70" />
-                    <div className="absolute inset-4 border border-gold/20 rounded-sm pointer-events-none transition-all duration-700 group-hover:scale-[0.96] group-hover:border-gold/40" />
+                    <div className="absolute inset-4 border border-[#D4B46A]/20 rounded-sm pointer-events-none transition-all duration-700 group-hover:scale-[0.96] group-hover:border-[#D4B46A]/40" />
                     <div className="relative z-10 bottom-8 px-8 pt-6 transform transition-transform duration-500 group-hover:translate-y-[-5px]">
                        <p className="text-offwhite font-serif text-3xl font-bold mb-2 tracking-wide">Harmann Gill</p>
-                       <p className="text-gold text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                         <span className="w-4 h-px bg-gold/50 inline-block"></span> Wealth Consultant
+                       <p className="text-[#D4B46A] text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                         <span className="w-4 h-px bg-[#D4B46A]/50 inline-block"></span> Wealth Consultant
                        </p>
                     </div>
                  </div>
@@ -438,8 +433,8 @@ export default function App() {
            </FadeIn>
            <FadeIn className="order-1 lg:order-2">
               <div className="inline-flex items-center gap-3 mb-6">
-                 <span className="w-12 h-px bg-gold border-none"></span>
-                 <span className="text-gold text-xs font-bold uppercase tracking-widest">Meet Harmann</span>
+                 <span className="w-12 h-px bg-[#D4B46A] border-none"></span>
+                 <span className="text-[#D4B46A] text-xs font-bold uppercase tracking-widest">Meet Harmann</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-offwhite mb-10 leading-tight">Finding Purpose Through Financial Clarity</h2>
               
@@ -459,20 +454,20 @@ export default function App() {
                 <p>
                   Today, my mission is twofold. I am deeply devoted to guiding my clients toward absolute financial clarity, while simultaneously expanding my business to empower others who are seeking growth, independence, and a deeply fulfilling purpose of their own.
                 </p>
-                <div className="mt-10 border-l-2 border-gold pl-8 py-3 bg-gradient-to-r from-gold/5 to-transparent">
-                  <h3 className="text-sm font-bold tracking-widest uppercase text-gold mb-3">My Core Philosophy</h3>
+                <div className="mt-10 border-l-2 border-[#D4B46A] pl-8 py-3 bg-gradient-to-r from-gold/5 to-transparent">
+                  <h3 className="text-sm font-bold tracking-widest uppercase text-[#D4B46A] mb-3">My Core Philosophy</h3>
                   <p className="text-offwhite font-serif italic text-xl md:text-2xl leading-snug">
                     “I help build lasting wealth through crystal clear strategies, not by chasing fleeting trends.”
                   </p>
                 </div>
                 <div className="pt-10 flex flex-col sm:flex-row flex-wrap items-center sm:items-start gap-4">
-                  <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-gold text-forest px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-gold-hover transition-colors shadow-lg text-sm uppercase w-full sm:w-auto hover:-translate-y-1 hover:shadow-gold/20">
-                    Book Free Clarity Session <ArrowRight size={16} />
+                  <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-[#c2a155] transition-colors shadow-lg text-sm uppercase w-full sm:w-auto hover:-translate-y-1 hover:shadow-gold/20">
+                    Book Free Session <ArrowRight size={16} />
                   </a>
-                  <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-transparent border border-gold text-gold px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-gold/10 hover:-translate-y-1 transition-all text-sm uppercase w-full sm:w-auto">
+                  <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-[#D4B46A]/10 hover:-translate-y-1 transition-all text-sm uppercase w-full sm:w-auto">
                     Become A Business Partner <Users size={16} />
                   </a>
-                  <a href="tel:+12505036992" className="inline-flex items-center justify-center gap-3 bg-transparent border border-offwhite/20 text-offwhite px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-white/5 hover:-translate-y-1 transition-all text-sm uppercase w-full sm:w-auto">
+                  <a href="tel:+12505036992" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 py-4 rounded-sm font-bold tracking-wide hover:bg-white/5 hover:-translate-y-1 transition-all text-sm uppercase w-full sm:w-auto">
                     <Phone size={16} /> Call Now
                   </a>
                 </div>
@@ -483,8 +478,8 @@ export default function App() {
 
       {/* --- WORKSHOPS --- */}
       <section id="workshops" className="py-24 bg-forest-dark text-offwhite relative overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] border border-gold/5 rounded-full" />
-        <div className="absolute -bottom-40 -left-60 w-[800px] h-[800px] border border-gold/5 rounded-full" />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] border border-[#D4B46A]/5 rounded-full" />
+        <div className="absolute -bottom-40 -left-60 w-[800px] h-[800px] border border-[#D4B46A]/5 rounded-full" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
            <FadeIn className="text-center max-w-2xl mx-auto mb-16">
@@ -499,18 +494,18 @@ export default function App() {
                { title: 'Wealth Protection', desc: 'Discover strategies to protect your assets and your family.' },
                { title: 'Business Events', desc: 'Explore how to build your own financial consulting practice.' }
              ].map((ws, i) => (
-                <FadeIn key={i} delay={i*0.1} className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all duration-300 rounded-sm backdrop-blur-sm group hover:scale-105 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:border-gold/30">
-                  <h3 className="text-xl font-serif text-offwhite mb-4 group-hover:text-gold transition-colors duration-300">{ws.title}</h3>
-                  <p className="text-sm text-offwhite/70 leading-relaxed group-hover:text-offwhite/90 transition-colors duration-300">{ws.desc}</p>
+                <FadeIn key={i} delay={i*0.1} className="bg-[#FCFBF7] border border-white/10 p-8 hover:bg-[#FCFBF7]/90 transition-all duration-300 rounded-sm backdrop-blur-sm group hover:scale-105 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:border-[#D4B46A]/30">
+                  <h3 className="text-xl font-serif text-forest mb-4 group-hover:text-[#D4B46A] transition-colors duration-300">{ws.title}</h3>
+                  <p className="text-sm text-forest-dark leading-relaxed group-hover:text-forest transition-colors duration-300">{ws.desc}</p>
                 </FadeIn>
              ))}
            </div>
            
            <FadeIn delay={0.4} className="flex justify-center flex-col sm:flex-row flex-wrap gap-4">
-             <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-gold text-forest px-8 py-4 rounded-sm font-bold tracking-wide hover:bg-gold-hover transition-colors shadow-lg text-center w-full sm:w-auto">
-               Reserve Your Seat
+             <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-[#D4B46A] text-forest px-8 py-4 rounded-sm font-bold tracking-wide hover:bg-[#c2a155] transition-colors shadow-lg text-center w-full sm:w-auto">
+               Book Free Session
              </a>
-             <button className="bg-transparent border border-offwhite/30 text-offwhite px-8 py-4 rounded-sm font-bold tracking-wide hover:bg-white/10 transition-colors text-center w-full sm:w-auto">
+             <button className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-8 py-4 rounded-sm font-bold tracking-wide hover:bg-white/10 transition-colors text-center w-full sm:w-auto">
                Learn More
              </button>
            </FadeIn>
@@ -518,8 +513,8 @@ export default function App() {
       </section>
 
       {/* --- WHO WE SERVE --- */}
-      <section className="py-24 bg-forest relative border-t border-gold/10 overflow-hidden">
-        <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-gold/5 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2 pointer-events-none block z-0"></div>
+      <section className="py-24 bg-forest relative border-t border-[#D4B46A]/10 overflow-hidden">
+        <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-[#D4B46A]/5 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2 pointer-events-none block z-0"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
           <FadeIn>
              <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-6">Who We Serve</h2>
@@ -531,20 +526,20 @@ export default function App() {
                   { title: 'Professionals & Entrepreneurs', desc: 'Needing tax-efficient wealth accumulation and strategic business succession planning.' },
                   { title: 'Pre-Retirees', desc: 'Looking to transition safely from wealth accumulation to reliable income generation.' }
                 ].map((item, i) => (
-                   <li key={i} className="flex items-start gap-4 p-6 bg-forest-dark border border-gold/10 rounded-sm hover:border-gold/30 transition-colors">
-                      <CheckCircle2 size={24} className="text-gold shrink-0 mt-1" />
+                   <li key={i} className="flex items-start gap-4 p-6 bg-[#FCFBF7] border border-[#D4B46A]/10 rounded-sm hover:border-[#D4B46A]/30 transition-colors">
+                      <CheckCircle2 size={24} className="text-[#D4B46A] shrink-0 mt-1" />
                       <div>
-                         <h4 className="text-offwhite font-serif font-bold text-lg mb-2">{item.title}</h4>
-                         <p className="text-slate-light text-sm leading-relaxed">{item.desc}</p>
+                         <h4 className="text-forest font-serif font-bold text-lg mb-2">{item.title}</h4>
+                         <p className="text-forest-dark text-sm leading-relaxed">{item.desc}</p>
                       </div>
                    </li>
                 ))}
              </ul>
           </FadeIn>
           <FadeIn delay={0.2} className="relative w-full flex items-center">
-             <div className="absolute -inset-4 border border-gold/10 rounded-sm pointer-events-none z-0 transform translate-x-4 translate-y-4 hidden lg:block"></div>
-             <div className="relative w-full aspect-[2/1] rounded-sm border border-gold/20 overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.4)] group z-10">
-                <div className="absolute inset-0 bg-gold/10 z-10 group-hover:opacity-0 transition-opacity duration-700 pointer-events-none"></div>
+             <div className="absolute -inset-4 border border-[#D4B46A]/10 rounded-sm pointer-events-none z-0 transform translate-x-4 translate-y-4 hidden lg:block"></div>
+             <div className="relative w-full aspect-[2/1] rounded-sm border border-[#D4B46A]/20 overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.4)] group z-10">
+                <div className="absolute inset-0 bg-[#D4B46A]/10 z-10 group-hover:opacity-0 transition-opacity duration-700 pointer-events-none"></div>
                 <img 
                   src="https://www.1life.co.za/globalassets/blog/2026/04/legacy-clients.jpg?width=1240&height=620&quality=80" 
                   alt="Professional Advisory" 
@@ -556,11 +551,11 @@ export default function App() {
       </section>
 
       {/* --- TESTIMONIALS --- */}
-      <section id="testimonials" className="py-24 bg-forest relative border-t border-gold/10">
+      <section id="testimonials" className="py-24 bg-forest relative border-t border-[#D4B46A]/10">
          <div className="max-w-7xl mx-auto px-6">
             <FadeIn className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-6">Client Experiences</h2>
-              <div className="w-20 h-1 bg-gold mx-auto"></div>
+              <div className="w-20 h-1 bg-[#D4B46A] mx-auto"></div>
             </FadeIn>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -569,12 +564,12 @@ export default function App() {
                 { name: 'David L.', text: 'The clarity I gained after just one session was incredible. I finally understand where my money is going.' },
                 { name: 'The Patel Family', text: 'Harmann genuinely cares about our family\'s security. The peace of mind he provided is priceless.' }
               ].map((test, i) => (
-                <FadeIn key={i} delay={i*0.1} className="bg-forest-dark border border-gold/10 p-10 rounded-sm shadow-sm relative pt-12">
-                   <div className="absolute top-0 right-10 -translate-y-1/2 w-14 h-14 bg-forest border border-gold/20 text-gold rounded-full flex items-center justify-center shadow-lg">
+                <FadeIn key={i} delay={i*0.1} className="bg-[#FCFBF7] border border-[#D4B46A]/10 p-10 rounded-sm shadow-sm relative pt-12">
+                   <div className="absolute top-0 right-10 -translate-y-1/2 w-14 h-14 bg-[#FCFBF7] border border-[#D4B46A]/20 text-[#D4B46A] rounded-full flex items-center justify-center shadow-lg">
                       <Quote size={24} fill="currentColor" />
                    </div>
-                   <p className="text-slate-light italic leading-relaxed mb-6 font-serif text-lg">"{test.text}"</p>
-                   <p className="text-gold font-bold text-sm uppercase tracking-widest">— {test.name}</p>
+                   <p className="text-forest-dark italic leading-relaxed mb-6 font-serif text-lg">"{test.text}"</p>
+                   <p className="text-[#D4B46A] font-bold text-sm uppercase tracking-widest">— {test.name}</p>
                 </FadeIn>
               ))}
             </div>
@@ -582,15 +577,15 @@ export default function App() {
       </section>
 
       {/* --- FAQ --- */}
-      <section id="faq" className="py-24 bg-forest border-t border-gold/10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none block z-0"></div>
+      <section id="faq" className="py-24 bg-forest border-t border-[#D4B46A]/10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4B46A]/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none block z-0"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <FadeIn className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-6">Frequently Asked Questions</h2>
             <p className="text-slate-light text-lg">Clear answers to help you feel confident about your next steps.</p>
           </FadeIn>
           
-          <div className="border-t border-gold/10">
+          <div className="border-t border-[#D4B46A]/10">
             {FAQS.map((faq, i) => (
                <FAQItem key={i} question={faq.q} answer={faq.a} index={i} />
             ))}
@@ -604,13 +599,13 @@ export default function App() {
           <FadeIn>
              <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-offwhite mb-12 leading-tight">Your Financial Future<br/>Deserves More Than Guesswork.</h2>
              <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 flex-wrap">
-               <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-gold text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:shadow-xl hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
-                 Become A Client <ArrowRight size={20} />
+               <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="bg-[#D4B46A] text-forest px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:shadow-xl hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
+                 Book Free Session <ArrowRight size={20} />
                </a>
-               <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="bg-transparent border-2 border-gold text-gold px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:bg-gold/10 hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
+               <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:bg-[#D4B46A]/10 hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
                  Become A Business Partner <Users size={20} />
                </a>
-               <a href="tel:+12505036992" className="bg-transparent border border-offwhite/20 text-offwhite px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:bg-white/5 hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
+               <a href="tel:+12505036992" className="bg-[#D4B46A] text-forest border border-[#D4B46A] px-6 sm:px-10 py-4 sm:py-5 rounded-sm font-bold tracking-wide hover:bg-white/5 hover:-translate-y-1 transition-all text-base sm:text-lg flex justify-center items-center gap-3 w-full sm:w-auto">
                  <Phone size={20} /> Call Now
                </a>
              </div>
@@ -619,7 +614,7 @@ export default function App() {
       </section>
 
       {/* --- CONTACT --- */}
-      <section id="contact" className="py-24 bg-forest border-t border-gold/10">
+      <section id="contact" className="py-24 bg-forest border-t border-[#D4B46A]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
           <FadeIn>
             <h2 className="text-3xl md:text-5xl font-serif text-offwhite mb-6">Let's Build Your Plan</h2>
@@ -627,7 +622,7 @@ export default function App() {
             
             <div className="space-y-8 mb-12">
               <a href="tel:+12505036992" className="flex items-center gap-6 group">
-                 <div className="w-14 h-14 bg-forest-dark border border-gold/20 text-gold rounded-full flex items-center justify-center group-hover:bg-gold group-hover:text-forest transition-colors shadow-sm">
+                 <div className="w-14 h-14 bg-forest-dark border border-[#D4B46A]/20 text-[#D4B46A] rounded-full flex items-center justify-center group-hover:bg-[#D4B46A] group-hover:text-forest transition-colors shadow-sm">
                    <Phone size={24} />
                  </div>
                  <div>
@@ -636,7 +631,7 @@ export default function App() {
                  </div>
               </a>
               <a href="mailto:itsharmanngill@gmail.com" className="flex items-center gap-6 group">
-                 <div className="w-14 h-14 bg-forest-dark border border-gold/20 text-gold rounded-full flex items-center justify-center group-hover:bg-gold group-hover:text-forest transition-colors shadow-sm">
+                 <div className="w-14 h-14 bg-forest-dark border border-[#D4B46A]/20 text-[#D4B46A] rounded-full flex items-center justify-center group-hover:bg-[#D4B46A] group-hover:text-forest transition-colors shadow-sm">
                    <Mail size={24} />
                  </div>
                  <div>
@@ -646,12 +641,12 @@ export default function App() {
               </a>
             </div>
 
-            <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-gold text-forest px-6 sm:px-8 py-4 rounded-sm font-bold tracking-wide hover:bg-gold-hover transition-all shadow-md w-full sm:w-auto text-sm sm:text-base text-center">
-               <Calendar size={20} className="shrink-0" /> Schedule Your Free Consultation
+            <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#D4B46A] text-forest px-6 sm:px-8 py-4 rounded-sm font-bold tracking-wide hover:bg-[#c2a155] transition-all shadow-md w-full sm:w-auto text-sm sm:text-base text-center">
+               <Calendar size={20} className="shrink-0" /> Book Free Session
             </a>
           </FadeIn>
           
-          <FadeIn delay={0.2} className="bg-forest-dark p-10 md:p-12 rounded-sm border border-gold/10 shadow-xl">
+          <FadeIn delay={0.2} className="bg-forest-dark p-10 md:p-12 rounded-sm border border-[#D4B46A]/10 shadow-xl">
              <h3 className="text-2xl font-serif text-offwhite mb-8">Send a Message</h3>
              <ContactForm />
           </FadeIn>
@@ -664,7 +659,7 @@ export default function App() {
          <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="col-span-1 md:col-span-2 lg:col-span-1">
               <p className="text-3xl font-serif font-bold text-offwhite mb-2">Harmann Gill</p>
-              <p className="text-xs font-bold tracking-widest uppercase text-gold mb-6">Wealth Consultant</p>
+              <p className="text-xs font-bold tracking-widest uppercase text-[#D4B46A] mb-6">Wealth Consultant</p>
               <p className="text-sm text-slate-light font-light leading-relaxed mb-6">
                 Empowering families with clarity, confidence, and absolute trust for their financial future. Building tailored blueprints that stand the test of time.
               </p>
@@ -675,7 +670,7 @@ export default function App() {
                <ul className="space-y-4">
                  {navLinks.map((link) => (
                    <li key={link.label}>
-                     <a href={link.href} className="text-slate-light hover:text-gold transition-colors text-sm">{link.label}</a>
+                     <a href={link.href} className="text-slate-light hover:text-[#D4B46A] transition-colors text-sm">{link.label}</a>
                    </li>
                  ))}
                </ul>
@@ -685,18 +680,18 @@ export default function App() {
                <h4 className="text-white font-bold tracking-wider uppercase text-sm mb-6">Contact</h4>
                <ul className="space-y-4">
                  <li>
-                   <a href="tel:+12505036992" className="text-slate-light hover:text-gold transition-colors text-sm flex items-center gap-3">
-                     <Phone size={16} className="text-gold" /> +1 (250)-503-6992
+                   <a href="tel:+12505036992" className="text-slate-light hover:text-[#D4B46A] transition-colors text-sm flex items-center gap-3">
+                     <Phone size={16} className="text-[#D4B46A]" /> +1 (250)-503-6992
                    </a>
                  </li>
                  <li>
-                   <a href="mailto:itsharmanngill@gmail.com" className="text-slate-light hover:text-gold transition-colors text-sm flex items-center gap-3">
-                     <Mail size={16} className="text-gold" /> itsharmanngill@gmail.com
+                   <a href="mailto:itsharmanngill@gmail.com" className="text-slate-light hover:text-[#D4B46A] transition-colors text-sm flex items-center gap-3">
+                     <Mail size={16} className="text-[#D4B46A]" /> itsharmanngill@gmail.com
                    </a>
                  </li>
                  <li>
                    <span className="text-slate-light text-sm flex items-center gap-3 cursor-default">
-                     <Calendar size={16} className="text-gold" /> Serving Clients Nationwide
+                     <Calendar size={16} className="text-[#D4B46A]" /> Serving Clients Nationwide
                    </span>
                  </li>
                </ul>
@@ -707,12 +702,12 @@ export default function App() {
                <p className="text-slate-light text-sm leading-relaxed mb-6">
                  Schedule a complimentary discovery call to see if our services fit your needs.
                </p>
-               <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex bg-gold text-forest px-6 py-3 rounded-sm font-bold tracking-wide hover:bg-gold-hover transition-colors text-sm">
+               <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex bg-[#D4B46A] text-forest px-6 py-3 rounded-sm font-bold tracking-wide hover:bg-[#c2a155] transition-colors text-sm">
                  Book Free Session
                </a>
             </div>
          </div>
-         <div className="max-w-7xl mx-auto px-6 py-6 border-t border-gold/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-light text-center md:text-left">
+         <div className="max-w-7xl mx-auto px-6 py-6 border-t border-[#D4B46A]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-light text-center md:text-left">
            <p>&copy; {new Date().getFullYear()} Harmann Gill. All rights reserved.</p>
            <div className="flex flex-wrap justify-center md:justify-end gap-6">
               <button onClick={() => setPrivacyPolicyOpen(true)} className="hover:text-white transition-colors">Privacy Policy</button>
@@ -738,12 +733,12 @@ export default function App() {
       </a>
 
       {/* --- FLOATING MOBILE CTA --- */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-forest-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] border-t border-gold/10 p-3 flex gap-3 md:hidden">
-         <a href="tel:+12505036992" className="flex-1 border border-gold text-gold py-3.5 rounded-sm font-bold flex items-center justify-center gap-2">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-forest-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] border-t border-[#D4B46A]/10 p-3 flex gap-3 md:hidden">
+         <a href="tel:+12505036992" className="flex-1 bg-[#D4B46A] text-forest border border-[#D4B46A] py-3.5 rounded-sm font-bold flex items-center justify-center gap-2">
            <Phone size={18} /> Call
          </a>
-         <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="flex-1 bg-gold text-forest py-3.5 rounded-sm font-bold flex items-center justify-center gap-2">
-           Book <ArrowRight size={18} />
+         <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="flex-1 bg-[#D4B46A] text-forest py-3.5 rounded-sm font-bold flex items-center justify-center gap-2">
+           Book Free Session <ArrowRight size={18} />
          </a>
       </div>
 
@@ -760,35 +755,35 @@ export default function App() {
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="bg-forest-dark border border-gold/20 rounded-sm shadow-2xl relative w-full max-w-3xl overflow-hidden z-10"
+                className="bg-forest-dark border border-[#D4B46A]/20 rounded-sm shadow-2xl relative w-full max-w-3xl overflow-hidden z-10"
               >
-                 <button onClick={() => setCtaModalOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-gold transition-colors p-2 bg-forest rounded-full z-20 shadow-sm border border-gold/10">
+                 <button onClick={() => setCtaModalOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-[#D4B46A] transition-colors p-2 bg-forest rounded-full z-20 shadow-sm border border-[#D4B46A]/10">
                     <X size={20} />
                  </button>
                  
-                 <div className="p-6 md:p-10 text-center border-b border-gold/10 bg-forest-dark">
+                 <div className="p-6 md:p-10 text-center border-b border-[#D4B46A]/10 bg-forest-dark">
                    <h3 className="text-2xl md:text-3xl font-serif text-offwhite mb-3 pr-8 md:pr-0">How would you like to proceed?</h3>
                    <p className="text-slate-light text-[15px]">Select the path that best aligns with your goals today.</p>
                  </div>
                  
                  <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gold/10 max-h-[60vh] overflow-y-auto md:max-h-none md:overflow-visible">
                     <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="p-8 md:p-12 text-center hover:bg-forest transition-colors group relative overflow-hidden">
-                       <div className="w-16 h-16 md:w-20 md:h-20 bg-forest rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-gold group-hover:scale-110 group-hover:bg-gold transition-all duration-500">
+                       <div className="w-16 h-16 md:w-20 md:h-20 bg-forest rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-[#D4B46A] group-hover:scale-110 group-hover:bg-[#D4B46A] transition-all duration-500">
                           <CheckCircle2 size={30} className="md:w-9 md:h-9 group-hover:text-forest" />
                        </div>
-                       <h4 className="text-xl md:text-2xl font-serif text-offwhite mb-3 md:mb-4 font-semibold">Become A Client</h4>
+                       <h4 className="text-xl md:text-2xl font-serif text-offwhite mb-3 md:mb-4 font-semibold">Book Free Session</h4>
                        <p className="text-xs md:text-sm text-slate-light mb-6 md:mb-8 leading-relaxed max-w-[250px] mx-auto">Schedule your free consultation to build your personal financial blueprint.</p>
-                       <span className="inline-flex items-center gap-2 text-gold font-bold uppercase tracking-wider text-[10px] md:text-xs group-hover:text-gold-hover">
-                         Book Session <ArrowRight size={14} className="md:w-4 md:h-4" />
+                       <span className="inline-flex items-center gap-2 text-[#D4B46A] font-bold uppercase tracking-wider text-[10px] md:text-xs group-hover:text-[#D4B46A]-hover">
+                         Book Free Session <ArrowRight size={14} className="md:w-4 md:h-4" />
                        </span>
                     </a>
                     <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="p-8 md:p-12 text-center hover:bg-forest transition-colors group relative overflow-hidden">
-                       <div className="w-16 h-16 md:w-20 md:h-20 bg-forest rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-gold group-hover:scale-110 group-hover:bg-gold transition-all duration-500">
+                       <div className="w-16 h-16 md:w-20 md:h-20 bg-forest rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-[#D4B46A] group-hover:scale-110 group-hover:bg-[#D4B46A] transition-all duration-500">
                           <Users size={30} className="md:w-9 md:h-9 group-hover:text-forest" />
                        </div>
                        <h4 className="text-xl md:text-2xl font-serif text-offwhite mb-3 md:mb-4 font-semibold">Become A Partner</h4>
                        <p className="text-xs md:text-sm text-slate-light mb-6 md:mb-8 leading-relaxed max-w-[250px] mx-auto">Start your journey as an independent wealth consultant with elite mentorship.</p>
-                       <span className="inline-flex items-center gap-2 text-gold font-bold uppercase tracking-wider text-[10px] md:text-xs group-hover:text-gold-hover">
+                       <span className="inline-flex items-center gap-2 text-[#D4B46A] font-bold uppercase tracking-wider text-[10px] md:text-xs group-hover:text-[#D4B46A]-hover">
                          Explore Opportunity <ArrowRight size={14} className="md:w-4 md:h-4" />
                        </span>
                     </a>
@@ -811,15 +806,15 @@ export default function App() {
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="bg-forest-dark border border-gold/20 rounded-sm shadow-2xl relative w-full max-w-4xl overflow-hidden z-20 flex flex-col max-h-[90vh]"
+                className="bg-forest-dark border border-[#D4B46A]/20 rounded-sm shadow-2xl relative w-full max-w-4xl overflow-hidden z-20 flex flex-col max-h-[90vh]"
               >
-                 <button onClick={() => setPrivacyPolicyOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-gold transition-colors p-2 bg-forest rounded-full z-30 shadow-sm border border-gold/10">
+                 <button onClick={() => setPrivacyPolicyOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-[#D4B46A] transition-colors p-2 bg-forest rounded-full z-30 shadow-sm border border-[#D4B46A]/10">
                     <X size={20} />
                  </button>
                  
-                 <div className="p-8 border-b border-gold/10 bg-forest-dark flex-shrink-0">
+                 <div className="p-8 border-b border-[#D4B46A]/10 bg-forest-dark flex-shrink-0">
                    <h3 className="text-2xl md:text-3xl font-serif text-offwhite mb-2 text-center">Privacy Policy</h3>
-                   <p className="text-gold text-xs font-bold uppercase tracking-widest text-center">World Financial Group (WFG) Independent Agent</p>
+                   <p className="text-[#D4B46A] text-xs font-bold uppercase tracking-widest text-center">World Financial Group (WFG) Independent Agent</p>
                  </div>
                  
                  <div className="p-8 overflow-y-auto text-slate-light leading-relaxed prose prose-invert mx-auto w-full text-[15px]">
@@ -852,15 +847,15 @@ export default function App() {
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="bg-forest-dark border border-gold/20 rounded-sm shadow-2xl relative w-full max-w-4xl overflow-hidden z-20 flex flex-col max-h-[90vh]"
+                className="bg-forest-dark border border-[#D4B46A]/20 rounded-sm shadow-2xl relative w-full max-w-4xl overflow-hidden z-20 flex flex-col max-h-[90vh]"
               >
-                 <button onClick={() => setTermsOfServiceOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-gold transition-colors p-2 bg-forest rounded-full z-30 shadow-sm border border-gold/10">
+                 <button onClick={() => setTermsOfServiceOpen(false)} className="absolute top-4 right-4 text-offwhite hover:text-[#D4B46A] transition-colors p-2 bg-forest rounded-full z-30 shadow-sm border border-[#D4B46A]/10">
                     <X size={20} />
                  </button>
                  
-                 <div className="p-8 border-b border-gold/10 bg-forest-dark flex-shrink-0">
+                 <div className="p-8 border-b border-[#D4B46A]/10 bg-forest-dark flex-shrink-0">
                    <h3 className="text-2xl md:text-3xl font-serif text-offwhite mb-2 text-center">Terms of Service</h3>
-                   <p className="text-gold text-xs font-bold uppercase tracking-widest text-center">World Financial Group (WFG) Independent Agent</p>
+                   <p className="text-[#D4B46A] text-xs font-bold uppercase tracking-widest text-center">World Financial Group (WFG) Independent Agent</p>
                  </div>
                  
                  <div className="p-8 overflow-y-auto text-slate-light leading-relaxed prose prose-invert mx-auto w-full text-[15px]">
@@ -896,26 +891,26 @@ export default function App() {
              />
              <motion.div
                initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: "tween", duration: 0.3 }}
-               className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-forest-dark shadow-2xl flex flex-col border-l border-gold/10"
+               className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-forest-dark shadow-2xl flex flex-col border-l border-[#D4B46A]/10"
              >
-                <div className="p-6 flex justify-between items-center border-b border-gold/10 bg-forest">
+                <div className="p-6 flex justify-between items-center border-b border-[#D4B46A]/10 bg-forest">
                    <span className="text-xl font-serif font-bold text-offwhite">Menu</span>
-                   <button onClick={() => setMobileMenuOpen(false)} className="text-offwhite hover:text-gold p-2 bg-forest-dark rounded-full shadow-sm border border-gold/10">
+                   <button onClick={() => setMobileMenuOpen(false)} className="text-offwhite hover:text-[#D4B46A] p-2 bg-forest-dark rounded-full shadow-sm border border-[#D4B46A]/10">
                       <X size={20} />
                    </button>
                 </div>
                 <div className="flex-1 overflow-y-auto p-8 flex flex-col gap-6">
                    {navLinks.map((link, i) => (
-                     <a key={i} href={link.href} onClick={() => setMobileMenuOpen(false)} className="text-xl font-medium text-offwhite hover:text-gold transition-colors pb-4 border-b border-gold/5">
+                     <a key={i} href={link.href} onClick={() => setMobileMenuOpen(false)} className="text-xl font-medium text-offwhite hover:text-[#D4B46A] transition-colors pb-4 border-b border-[#D4B46A]/5">
                         {link.label}
                      </a>
                    ))}
                 </div>
-                <div className="p-6 bg-forest mt-auto border-t border-gold/10 pb-24">
-                   <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full bg-gold text-forest py-4 rounded-sm font-bold flex items-center justify-center gap-2 shadow-md hover:bg-gold-hover transition-colors mb-3">
+                <div className="p-6 bg-forest mt-auto border-t border-[#D4B46A]/10 pb-24">
+                   <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full bg-[#D4B46A] text-forest py-4 rounded-sm font-bold flex items-center justify-center gap-2 shadow-md hover:bg-[#c2a155] transition-colors mb-3">
                      Book Free Session <ArrowRight size={18} />
                    </a>
-                   <a href="tel:+12505036992" onClick={() => setMobileMenuOpen(false)} className="w-full bg-transparent border border-gold text-gold py-4 rounded-sm font-bold flex items-center justify-center gap-2 shadow-md hover:bg-gold/10 transition-colors">
+                   <a href="tel:+12505036992" onClick={() => setMobileMenuOpen(false)} className="w-full bg-[#D4B46A] text-forest border border-[#D4B46A] py-4 rounded-sm font-bold flex items-center justify-center gap-2 shadow-md hover:bg-[#D4B46A]/10 transition-colors">
                      <Phone size={18} /> Call Now
                    </a>
                 </div>
