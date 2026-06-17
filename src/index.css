@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400&family=Helvetica+Neue:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-forest: #0B3D2E;
-  --color-forest-dark: #141414; /* Using ink color for dark accents */
+  --color-forest-dark: #0B3D2E; /* Changed to match forest green as primary dark */
   --color-gold: #D4B46A;
   --color-gold-hover: #c2a155;
   --color-beige: #F2E6B3;
   --color-offwhite: #FCFBF7;
-  --color-slate-light: rgba(252, 251, 247, 0.7); /* Adjusted for dark theme */
-  --color-slate: #FCFBF7; /* Adjusted for dark theme to offwhite */
+  --color-slate-light: #4A4A4A; /* Slate Gray for secondary text */
+  --color-slate: #4A4A4A; /* Slate Gray */
   
-  --font-serif: Georgia, serif;
-  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Playfair Display", serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -25,7 +25,7 @@ body {
 }
 
 .glass-nav {
-  background: rgba(11, 61, 46, 0.8);
+  background: rgba(11, 61, 46, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(212, 180, 106, 0.2);
 }
