@@ -408,7 +408,7 @@ export default function App() {
       </section>
 
       {/* --- MY STORY --- */}
-      <section id="story" className="py-24 bg-[#F2E6B3] border-t border-[#D4B46A]/20 relative overflow-hidden">
+      <section id="story" className="py-24 bg-[#0B3D2E] border-t border-[#D4B46A]/20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#D4B46A]/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none block"></div>
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
            <FadeIn className="order-2 lg:order-1 relative">
@@ -492,7 +492,7 @@ export default function App() {
              ].map((ws, i) => (
                 <FadeIn key={i} delay={i*0.1} className="bg-[#0B3D2E] p-8 rounded-sm relative group border border-[#D4B46A]/20 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_10px_40px_rgba(212,180,106,0.15)] hover:border-[#D4B46A]/40 hover:-translate-y-1 overflow-hidden">
                   <h3 className="text-xl font-serif text-[#FCFBF7] mb-4 group-hover:text-[#D4B46A] transition-colors duration-300">{ws.title}</h3>
-                  <p className="text-sm text-[#0B3D2E]/80 leading-relaxed transition-colors duration-300">{ws.desc}</p>
+                  <p className="text-sm text-[#FCFBF7]/70 leading-relaxed transition-colors duration-300">{ws.desc}</p>
                 </FadeIn>
              ))}
            </div>
@@ -501,7 +501,7 @@ export default function App() {
              <a href="https://calendly.com/harmankaursrealty/45min" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#D4B46A] text-[#0B3D2E] px-8 py-4 rounded-sm font-serif font-bold tracking-wide transition-all shadow-[0_4px_14px_0_rgba(212,180,106,0.39)] hover:shadow-[0_6px_20px_rgba(212,180,106,0.23)] hover:bg-[#c2a155] hover:-translate-y-1 uppercase text-sm w-full sm:w-auto text-center">
                Book Free Session
              </a>
-             <button className="inline-flex items-center justify-center gap-2 bg-transparent text-[#0B3D2E] border border-[#0B3D2E] px-8 py-4 rounded-sm font-serif font-bold tracking-wide transition-all shadow-sm hover:bg-[#0B3D2E]/5 hover:-translate-y-1 uppercase text-sm w-full sm:w-auto text-center">
+             <button className="inline-flex items-center justify-center gap-2 bg-transparent text-[#D4B46A] border border-[#D4B46A] px-8 py-4 rounded-sm font-serif font-bold tracking-wide transition-all shadow-sm hover:bg-[#D4B46A]/10 hover:-translate-y-1 uppercase text-sm w-full sm:w-auto text-center">
                Learn More
              </button>
            </FadeIn>
@@ -650,7 +650,7 @@ export default function App() {
       </section>
 
       {/* --- FOOTER --- */}
-      <footer className="bg-[#FCFBF7] font-serif relative">
+      <footer className="bg-[#0B3D2E] font-serif relative">
          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4B46A]/30 to-transparent"></div>
          <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="col-span-1 md:col-span-2 lg:col-span-1">
