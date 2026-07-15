@@ -525,7 +525,7 @@ export default function App() {
                    <li key={i} className="flex items-start gap-4 p-6 bg-[#0B3D2E] border border-[#D4B46A]/20 rounded-sm hover:border-[#D4B46A]/40 transition-all shadow-md">
                       <CheckCircle2 size={24} className="text-[#D4B46A] shrink-0 mt-1" />
                       <div>
-                         <h4 className="text-[#FCFBF7] font-serif font-bold text-lg mb-2">{item.title}</h4>
+                         <h4 className="text-[#D4B46A] font-serif font-bold text-lg mb-2">{item.title}</h4>
                          <p className="text-[#FCFBF7]/70 text-sm leading-relaxed">{item.desc}</p>
                       </div>
                    </li>
