@@ -162,7 +162,7 @@ export default function App() {
     { label: 'My Story', href: '#story' },
     { label: 'Services', href: '#services' },
     { label: 'Resources', href: '#workshops' },
-    { label: 'Contacts', href: '#contact' },
+    { label: 'Contact', href: '#contact' },
   ];
 
   const SERVICES = [
@@ -268,7 +268,7 @@ export default function App() {
                        {[...Array(5)].map((_, i) => <Star key={i} size={10} className="fill-current sm:w-3 sm:h-3" />)}
                     </div>
                     <p className="text-[#0B3D2E] font-serif font-bold text-sm sm:text-base md:text-lg leading-tight tracking-wide">Licensed & Trusted</p>
-                    <p className="text-[#D4B46A]/80 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest font-bold mt-0.5 sm:mt-1">Wealth Consultant</p>
+                    <p className="text-[#D4B46A]/80 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest font-bold mt-0.5 sm:mt-1">Professional</p>
                   </div>
                 </motion.div>
              </div>
@@ -290,9 +290,9 @@ export default function App() {
               { t: 'Product-Focused', d: 'Accumulating accounts without a unified blueprint leaves significant blind spots.' },
               { t: 'The Missing Blueprint', d: 'You need an overarching strategy that ties everything together into one reliable path forward.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.15} className="bg-[#FCFBF7] p-10 border border-[#D4B46A]/10 rounded-none shadow-sm hover:border-[#D4B46A]/30 transition-colors duration-500">
-                 <h3 className="text-xl font-serif text-[#0B3D2E] border-b border-[#D4B46A]/20 pb-4 mb-5 font-semibold">{item.t}</h3>
-                 <p className="text-[#4A4A4A] flex-1 leading-relaxed text-[15px]">{item.d}</p>
+               <FadeIn key={i} delay={i * 0.15} className="bg-[#D4B46A] p-10 border border-[#0B3D2E]/10 rounded-none shadow-sm hover:border-[#0B3D2E]/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                 <h3 className="text-xl font-serif text-[#0B3D2E] border-b border-[#0B3D2E]/20 pb-4 mb-5 font-semibold">{item.t}</h3>
+                 <p className="text-[#0B3D2E] flex-1 leading-relaxed text-[15px]">{item.d}</p>
                </FadeIn>
             ))}
           </div>
@@ -325,7 +325,7 @@ export default function App() {
                     
                     {svc.gold && (
                        <a href="https://www.jotform.com/260195787903468" target="_blank" rel="noreferrer" className="relative z-10 mt-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-[#bda15e] text-[#4A4A4A] px-7 py-3.5 rounded-sm font-bold tracking-widest hover:from-[#bda15e] hover:to-gold hover:-translate-y-1 transition-all shadow-[0_10px_20px_rgba(212,180,106,0.3)] text-[11px] uppercase overflow-hidden group/btn w-full sm:w-auto">
-                          <span className="relative z-10 flex items-center gap-2">Professional Application <Users size={14} /></span>
+                          <span className="relative z-10 flex items-center gap-2">Learn More <Users size={14} /></span>
                           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
                        </a>
                     )}
@@ -384,13 +384,13 @@ export default function App() {
       <section className="py-24 bg-[#0B3D2E] border-t border-[#D4B46A]/20">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
              <FadeIn>
-                <h2 className="text-3xl md:text-5xl font-serif text-[#FCFBF7] mb-6">Why Partner With Harmann?</h2>
+                <h2 className="text-3xl md:text-5xl font-serif text-[#FCFBF7] mb-6">Why Partner With Us</h2>
                 <p className="text-[#FCFBF7]/70 mb-10 leading-relaxed text-lg">We don't just offer advice; we provide a structured, long-term framework to ensure your family's financial stability and growth.</p>
                 
                 <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4">
                   {[
-                    'Personalized Financial Clarity', 'Structured Planning', 'Family-Focused Strategies',
-                    'Long-Term Relationship Approach', 'Guidance With Simplicity', 'Confidence Through Planning'
+                    'Personalized Strategies', 'Holistic Approach', 'Business Succession Planning',
+                    'Estate/Wealth Preservation', 'Long-Term Relationship Building', 'Guidance With Simplicity'
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="text-[#D4B46A] shrink-0 mt-0.5" size={20} />
@@ -401,7 +401,7 @@ export default function App() {
              </FadeIn>
              <FadeIn delay={0.2} className="relative h-full min-h-[400px] bg-[#FCFBF7] border border-[#D4B46A]/20 rounded-sm p-10 flex flex-col justify-center border-l-4 border-[#D4B46A]">
                 <Quote size={56} className="text-[#D4B46A]/20 mb-8" />
-                <h3 className="text-2xl md:text-3xl font-serif text-[#0B3D2E] leading-snug mb-6">"The goal is not to accumulate a bunch of products, but to design a life of complete financial confidence."</h3>
+                <h3 className="text-2xl md:text-3xl font-serif text-[#0B3D2E] leading-snug mb-6">"The goal is not to accumulate a bunch of products but to build a life of lasting financial confidence."</h3>
                 <p className="font-bold text-[#D4B46A] uppercase tracking-widest text-sm">— Harmann Gill</p>
              </FadeIn>
         </div>
@@ -436,16 +436,16 @@ export default function App() {
               
               <div className="space-y-6 text-[#FCFBF7]/70 leading-relaxed text-[16px]">
                 <p>
-                  I did not start out planning to be a wealth consultant, but rather, I began with a personal search for stability, clarity, and an empowered future. I know exactly how it feels to have grand ambitions while lacking the precise financial roadmap to bring them to life. That very search for direction is what led me to my true calling.
+                  I didn't start out planning to be a wealth consultant; rather, I started out looking for stability, clarity, and an empowered future. I know exactly what it feels like to have grand ambitions without the precise financial roadmap to bring them to life. That very search for direction is what led me to my true calling.
                 </p>
                 <p>
-                  Like many, I noticed how incredibly hard individuals and families work every single day, only to still feel uncertain about where they stand financially. I recognized a profound gap. The missing piece was not a lack of effort or ambition, but a lack of expert guidance, accessible strategies, and a trusted partner to simplify the complex world of personal wealth.
+                  Like many, I noticed how incredibly hard individuals and families work every single day, only to still feel uncertain about where they stand financially. This revealed a profound gap. The missing piece is not a lack of effort or ambition, but a lack of awareness, accessible strategies, and expert guidance to simplify the complexities of financial world.
                 </p>
                 <p>
                   This realization changed my entire perspective. Seeking holistic growth, I stepped into the financial services industry and quickly discovered something much larger than a career: I found a vibrant, lifelong purpose.
                 </p>
                 <p>
-                  I learned firsthand that true wealth extends far beyond an account balance. It is about lasting security, the freedom of choice, and the ability to navigate life without financial stress. This profound understanding inspired my transition into becoming a dedicated wealth consultant. By helping families eliminate confusion and build clear, structured blueprints for security, I realized this was the exact impact I wanted to create.
+                  I learned firsthand that true wealth extends far beyond an account balance. It is about lasting security, the freedom of choice, and the ability to navigate life without financial stress. This profound understanding inspired my transition into becoming an entrepreneur in financial industry. By helping families eliminate confusion and build clear, structured blueprints for security, I realized how big of an impact can be made for generations to come.
                 </p>
                 <p>
                   Today, my mission is twofold. I am deeply devoted to guiding my clients toward absolute financial clarity, while simultaneously expanding my business to empower others who are seeking growth, independence, and a deeply fulfilling purpose of their own.
@@ -491,7 +491,7 @@ export default function App() {
                { title: 'Business Events', desc: 'Explore how to build your own financial consulting practice.' }
              ].map((ws, i) => (
                 <FadeIn key={i} delay={i*0.1} className="bg-[#0B3D2E] p-8 rounded-sm relative group border border-[#D4B46A]/20 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_10px_40px_rgba(212,180,106,0.15)] hover:border-[#D4B46A]/40 hover:-translate-y-1 overflow-hidden">
-                  <h3 className="text-xl font-serif text-[#FCFBF7] mb-4 group-hover:text-[#D4B46A] transition-colors duration-300">{ws.title}</h3>
+                  <h3 className="text-xl font-serif text-[#D4B46A] mb-4 transition-colors duration-300">{ws.title}</h3>
                   <p className="text-sm text-[#FCFBF7]/70 leading-relaxed transition-colors duration-300">{ws.desc}</p>
                 </FadeIn>
              ))}
@@ -558,7 +558,7 @@ export default function App() {
               {[
                 { name: 'Sarah & James M.', text: 'For the first time, we finally feel financially organized and confident about our future. Harmann simplified everything.' },
                 { name: 'David L.', text: 'The clarity I gained after just one session was incredible. I finally understand where my money is going.' },
-                { name: 'The Patel Family', text: 'Harmann genuinely cares about our family\'s security. The peace of mind he provided is priceless.' }
+                { name: 'The Patel Family', text: 'Harmann genuinely cares about our family\'s security. The peace of mind she provided is priceless.' }
               ].map((test, i) => (
                 <FadeIn key={i} delay={i*0.1} className="bg-[#F2E6B3] border border-[#D4B46A]/20 p-10 rounded-sm shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative pt-12 text-[#4A4A4A]">
                    <div className="absolute top-0 right-10 -translate-y-1/2 w-14 h-14 bg-[#F2E6B3] border border-[#D4B46A]/30 text-[#D4B46A] rounded-full flex items-center justify-center shadow-lg">
