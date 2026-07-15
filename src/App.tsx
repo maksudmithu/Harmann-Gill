@@ -176,10 +176,10 @@ export default function App() {
 
   const FAQS = [
     { q: 'Do I need a lot of money to get started?', a: 'Not at all — and this is the biggest myth in financial planning. You can start with as little as $50 a month. What matters most isn\'t how much you start with, it\'s starting. The sooner we create a plan around your current reality, the more options you have as your income grows.' },
-    { q: 'How does the free discovery session work?', a: 'It\'s a relaxed, 45-minute conversation — zero pressure, zero sales pitch. Harmann listens to where you are, what you want, and what\'s holding you back. You\'ll leave with clarity and a clear direction, whether or not you decide to move forward. There is absolutely no obligation.' },
+    { q: 'How does the free discovery session work?', a: 'It\'s a relaxed, 45-minute conversation — zero pressure, zero sales pitch. We listen to where you are, what you want, and what\'s holding you back. You\'ll leave with clarity and a clear direction, whether or not you decide to move forward. There is absolutely no obligation.' },
     { q: 'How often will we review my financial plan?', a: 'Life changes, and your financial plan should evolve with it. We typically schedule comprehensive reviews annually, but I\'m always available for check-ins whenever there\'s a major life event—like a job change, buying a home, or growing your family—to ensure your strategy stays on track.' },
-    { q: 'Can you help me plan for retirement if I\'m starting late?', a: 'Absolutely — and it\'s never too late to start. Harmann works with clients at every stage, including those who feel they\'ve lost time. We\'ll map out your retirement income goals, maximize what you have, and build a strategy to get you there with confidence.' },
-    { q: 'Can we meet virtually if I\'m outside the local area?', a: 'Yes — most sessions are conducted virtually via video call, making it easy and convenient wherever you are. Harmann works with clients across Canada and the United States, and virtual meetings are just as thorough and personal as in-person ones.' }
+    { q: 'Can you help me plan for retirement if I\'m starting late?', a: 'Absolutely — and it\'s never too late to start. We work with clients at every stage, including those who feel they\'ve lost time. We\'ll map out your retirement income goals, maximize what you have, and build a strategy to get you there with confidence.' },
+    { q: 'Can we meet virtually if I\'m outside the local area?', a: 'Yes — most sessions are conducted virtually via video call, making it easy and convenient wherever you are. We work with clients across Canada and the United States, and virtual meetings are just as thorough and personal as in-person ones.' }
   ];
 
   return (
